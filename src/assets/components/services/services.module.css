@@ -1,0 +1,22 @@
+#servicesMainContainer{
+    padding: 0vw 8.482vw;
+    color: white;
+}
+#servicesMainContainer>p{
+    text-align: center;
+    font-weight: 600;
+}
+#servicesMainContainer>p:nth-child(1){
+    font-size: 1.69vw;
+    padding-bottom: 0.903vw;
+}
+#servicesMainContainer>p:nth-child(2){
+    font-size: 2.778vw;
+    color: #0872BF;
+    padding-bottom: 4.931vw;
+}
+#servicesSubContainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 7.216vw;
+}

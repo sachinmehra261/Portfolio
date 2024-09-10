@@ -1,0 +1,46 @@
+#footer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+    /* border: 2px solid red; */
+}
+#footer>#copyrightContainer{
+    display: flex;
+    gap: 15px;
+    /* border: 2px solid red; */
+    justify-content: center;
+    padding: 2vw;
+    /* border: 2px solid red; */
+    font-size: 18px;
+}
+#footer>#copyrightContainer>div{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    /* justify-content: center; */
+}
+#footer>#copyrightContainer::before{
+    content: '';
+    position: relative;
+    top: 10px;
+    height: .13vw;
+    width: 20%;
+    background-color: rgb(217, 217, 217);
+}
+#footer>#copyrightContainer::after{
+    top: 10px;
+    content: '';
+    position: relative;
+    height: .13vw;
+    width: 20%;
+    background-color: rgb(217, 217, 217);
+}
+#footer>#copyrightContainer>div>img{
+   cursor: pointer;
+}
+
+#mailLogo{
+    color: #2c67ff;
+    font-size :1.6vw
+}

@@ -1,0 +1,26 @@
+#serviceCardContainer{
+    width: 24.626vw;
+    height: 30.909vw;
+    padding: 2.083vw;
+    border: 1px solid #0B467C;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#serviceCardContainer:hover{
+    border: .2vw solid #0B467C;
+}
+#serviceCardImg{
+    height: 13.542vw;
+    width: 9.931vw;
+    margin-bottom: 2.097vw;
+}
+#serviceCardContainer>p:nth-child(2){
+    font-size: 1.736vw;
+    padding-bottom: 2.5vw;
+}
+#serviceCardContainer>p:nth-child(3){
+    font-size: 1.389vw;
+    text-align:justify;
+}

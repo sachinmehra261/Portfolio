@@ -1,0 +1,99 @@
+#aboutMainContainer{
+    padding: 0vw 6.319vw;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid violet; */
+    margin-bottom: 8.75vw;
+}
+#aboutContentContainer{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    width: 33.922vw;
+    margin-top: 5.325vw;
+}
+#aboutContentContainer>p:nth-child(1){
+    font-size: 1.667vw;
+    padding-bottom: 2.014vw;
+}
+#aboutContentContainer>p:nth-child(1)>span{
+    color: #0872BF;
+}
+#aboutContentContainer>p:nth-child(2){
+    font-size: 2.431vw;
+    font-weight: bold;
+    color: #0872BF;
+    padding-bottom: 2.55vw;
+}
+#aboutContentContainer>p:nth-child(3){
+    font-size: 1.875vw;
+    padding-bottom: 1.93vw;
+}
+#aboutContentContainer>p:nth-child(4){
+    font-size: 1.597vw;
+    padding-bottom: 1.93vw;
+}
+#whatsAppConnect{
+    padding: 1.042vw 0vw;
+    background-color: #0872BF;
+    border-radius: 10px;
+    width: 12.153vw;
+    font-size: 1.389vw;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 4.653vw;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    gap: .3vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#whatsAppLogo{
+    font-size: 1.4vw;
+}
+
+#aboutContentContainer>div>p{
+    font-size: 1.667vw;
+}
+
+#socialMedia{
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    /* border: 1px solid red; */
+}
+#socialMedia a>img{
+    height: 1.6vw;
+    /* border: 1px solid red; */
+}
+#mailLogo{
+    color: #0872BF; 
+    font-size: 2vw;
+}
+
+#profilePicture{
+    height: 44.167vw;
+    width: 34.722vw;
+    margin-right: 100px;
+    position: relative;
+    /* border: 1px solid green; */
+}
+#profilePicture>div{
+    height: 33.333vw;
+    border-radius: 66% 70% 70% 80%;
+    width: 35.972vw;
+    background-color: #0872BF;
+    z-index: -22;
+    position: absolute;
+    top: 0;
+    transform: rotate(40deg);
+}
+#profilePicture>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

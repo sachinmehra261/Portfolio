@@ -1,0 +1,67 @@
+#contactMainContainer{
+    width: 88%;
+    margin: 0vw auto 5vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+#contactHeading{
+    text-align: center;
+    font-size: 2.6vw;
+    font-weight: 600;
+    padding-bottom : 3vw;  
+}
+#contactHeading>span{
+    color: #0872BF;
+}
+
+#contactForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+    font-size: 1.3vw;
+}
+#contactForm>input{
+    padding: 1vw;
+    width: 30vw;
+    border-bottom:.15vw solid #0872BF;
+    border-left:.15vw solid #0872BF;
+    outline: none;
+    border-right: none;
+    border-top: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 500;
+    font-size: 1vw;
+    color: white;
+}
+
+#contactForm>textarea{
+    border-bottom:.15vw solid #0872BF;
+    border-left:.15vw solid #0872BF;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 1vw;
+    max-width: 30vw;
+    min-width: 30vw;
+    outline: none;
+    border-right: none;
+    border-top: none;
+    font-weight: 500;
+    font-size: 1vw;
+    color: white;
+}
+#contactForm>button{
+    padding: .8vw 1vw;
+    width: 30vw;
+    outline: none;
+    border: none;
+    border-radius: .5vw;
+    border: none;
+    color: black;
+    cursor: pointer;
+    background-color: #0872BF;
+    font-size: 1vw;    
+    color: white;
+}
