@@ -1,4 +1,5 @@
-#contactMainContainer{
+/* Base styles for larger screens (default) */
+#contactMainContainer {
     width: 88%;
     margin: 0vw auto 5vw;
     display: flex;
@@ -7,28 +8,28 @@
     align-items: center;
     color: white;
 }
-#contactHeading{
+#contactHeading {
     text-align: center;
     font-size: 2.6vw;
     font-weight: 600;
-    padding-bottom : 3vw;  
+    padding-bottom: 3vw;
 }
-#contactHeading>span{
+#contactHeading>span {
     color: #0872BF;
 }
 
-#contactForm{
+#contactForm {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5vw;
     font-size: 1.3vw;
 }
-#contactForm>input{
+#contactForm>input {
     padding: 1vw;
     width: 30vw;
-    border-bottom:.15vw solid #0872BF;
-    border-left:.15vw solid #0872BF;
+    border-bottom: .15vw solid #0872BF;
+    border-left: .15vw solid #0872BF;
     outline: none;
     border-right: none;
     border-top: none;
@@ -38,9 +39,9 @@
     color: white;
 }
 
-#contactForm>textarea{
-    border-bottom:.15vw solid #0872BF;
-    border-left:.15vw solid #0872BF;
+#contactForm>textarea {
+    border-bottom: .15vw solid #0872BF;
+    border-left: .15vw solid #0872BF;
     background-color: rgba(0, 0, 0, 0);
     padding: 1vw;
     max-width: 30vw;
@@ -52,16 +53,70 @@
     font-size: 1vw;
     color: white;
 }
-#contactForm>button{
+#contactForm>button {
     padding: .8vw 1vw;
     width: 30vw;
     outline: none;
     border: none;
     border-radius: .5vw;
-    border: none;
-    color: black;
     cursor: pointer;
     background-color: #0872BF;
-    font-size: 1vw;    
+    font-size: 1vw;
     color: white;
+}
+
+/* Media query for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    #contactMainContainer {
+        width: 95%;
+        margin-bottom: 4vw;
+    }
+    #contactHeading {
+        font-size: 4vw;
+        padding-bottom: 2.5vw;
+    }
+    #contactForm {
+        gap: 2vw;
+    }
+    #contactForm>input, 
+    #contactForm>textarea, 
+    #contactForm>button {
+        width: 80%;
+        font-size: 1.5vw;
+    }
+    #contactForm>input, 
+    #contactForm>textarea {
+        padding: 1.5vw;
+        width: 30vw;
+    }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+    #contactMainContainer {
+        width: 100%;
+        margin-bottom: 6vw;
+    }
+    #contactHeading {
+        font-size: 5vw;
+        padding-bottom: 2vw;
+    }
+    #contactForm {
+        gap: 3vw;
+    }
+    #contactForm>input, 
+    #contactForm>textarea, 
+    #contactForm>button {
+        width: 90%;
+        font-size: 2.5vw;
+    }
+    #contactForm>input, 
+    #contactForm>textarea {
+        padding: 2vw;
+        width: 30vw;
+    }
+    #contactForm>button {
+        padding: 2vw;
+        font-size: 2.5vw;
+    }
 }

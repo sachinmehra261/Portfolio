@@ -12,12 +12,13 @@ function Contact() {
     <>
         <div id={styles.contactMainContainer}>
             <p id={styles.contactHeading}>Contact <span>Me</span></p>
-            <form id={styles.contactForm} onSubmit={handleSubmit}>
+            <form id={styles.contactForm} action="post" name="contact" method="POST" data-netlify="true">
                 <input type="text" name="name" id={styles.name} placeholder='Enter your name'/>
                 <input type="email" name="email" id={styles.email} placeholder='Enter your email'/>
                 <input type="tel" name="phone" id={styles.phone} placeholder='Enter your phone number'/>
+                <input type="hidden" name="form-name" value="contact"/>
                 <textarea name="message" id={styles.message} placeholder='Enter message'></textarea>
-                <button>Submit</button>
+                <button type='submit'>Submit</button>
             </form>
         </div>
 

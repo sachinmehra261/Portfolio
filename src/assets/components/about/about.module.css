@@ -68,7 +68,6 @@
 }
 #socialMedia a>img{
     height: 1.6vw;
-    /* border: 1px solid red; */
 }
 #mailLogo{
     color: #0872BF; 
@@ -80,20 +79,135 @@
     width: 34.722vw;
     margin-right: 100px;
     position: relative;
+    z-index: -1;
+    position: relative;
+    z-index: -1;
     /* border: 1px solid green; */
 }
 #profilePicture>div{
     height: 33.333vw;
-    border-radius: 66% 70% 70% 80%;
+    border-radius: 50% 79% 57% 65%;
     width: 35.972vw;
     background-color: #0872BF;
     z-index: -22;
     position: absolute;
+    z-index: -1;
     top: 0;
-    transform: rotate(40deg);
+    transform: rotate(-6deg);
+    background-image: url('E:\Portfolio\portfolio\src\assets\images\profile.png');
+    background-position: 3vw 3vw;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 #profilePicture>img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+/* Base styles for larger screens (default) */
+#aboutMainContainer {
+    padding: 0vw 6.319vw;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8.75vw;
+}
+#aboutContentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 33.922vw;
+    margin-top: 5.325vw;
+}
+/* Other existing styles */
+
+/* Media query for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    #aboutMainContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0vw 4vw;
+        margin-bottom: 5vw;
+    }
+    #aboutContentContainer {
+        width: 100%;
+        margin-top: 2vw;
+    }
+    #aboutContentContainer > p {
+        font-size: 4vw;
+        padding-bottom: 2vw;
+    }
+    #whatsAppConnect {
+        width: 40%;
+        font-size: 3vw;
+    }
+    #whatsAppLogo {
+        font-size: 3.5vw;
+    }
+    #socialMedia a > img {
+        height: 4vw;
+    }
+    #profilePicture {
+        height: 80vw;
+        width: 70%;
+        margin: auto;
+    }
+    #profilePicture > div {
+        margin-top: 5vw;
+        height: 60vw;
+        width: 100%;
+    }
+    #mailLogo{
+        color: #0872BF; 
+        font-size: 5.5vw;
+    }
+    #aboutContentContainer>div>p{
+        font-size: 2.667vw;
+    }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+    #aboutMainContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 2vw;
+        margin: 11vw 0vw 0vw;
+    }
+    #aboutContentContainer > p:nth-child(1) {
+        font-size: 5vw;
+    }
+    #aboutContentContainer > p:nth-child(2) {
+        font-size: 6vw;
+    }
+    #aboutContentContainer > p:nth-child(3),
+    #aboutContentContainer > p:nth-child(4) {
+        font-size: 4vw;
+    }
+    #whatsAppConnect {
+        width: 50%;
+        font-size: 4vw;
+    }
+    #whatsAppLogo {
+        font-size: 5vw;
+    }
+    #profilePicture {
+        height: 80vw;
+        width: 70%;
+        margin: auto;
+    }
+    #profilePicture > div {
+        height: 70vw;
+        width: 100%;
+    }
+    #socialMedia a > img {
+        height: 5vw;
+    }
+    #mailLogo{
+        color: #0872BF; 
+        font-size: 6vw;
+    }
+    #aboutContentContainer>div>p{
+        font-size: 2.667vw;
+    }
 }

@@ -1,26 +1,72 @@
-#serviceCardContainer{
+/* Base sextyles for larger screens (default) */
+#serviceCardContainer {
     width: 24.626vw;
     height: 30.909vw;
     padding: 2.083vw;
-    border: 1px solid #0B467C;
+    border: .2vw solid #0B467C;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: border 0.3s;
 }
-#serviceCardContainer:hover{
-    border: .2vw solid #0B467C;
+#serviceCardContainer:hover {
+    border: 0.2vw solid #0084ffc5;
 }
-#serviceCardImg{
+#serviceCardImg {
     height: 13.542vw;
     width: 9.931vw;
     margin-bottom: 2.097vw;
 }
-#serviceCardContainer>p:nth-child(2){
+#serviceCardContainer>p:nth-child(2) {
     font-size: 1.736vw;
     padding-bottom: 2.5vw;
+    color: #0872BF;
+    text-align: center;
 }
-#serviceCardContainer>p:nth-child(3){
+#serviceCardContainer>p:nth-child(3) {
     font-size: 1.389vw;
-    text-align:justify;
+    text-align: justify;
+}
+
+/* Media query for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    #serviceCardContainer {
+        width: 40vw;
+        height: auto;
+        padding: 3vw;
+    }
+    #serviceCardImg {
+        height: 20vw;
+        width: 15vw;
+        margin-bottom: 3vw;
+    }
+    #serviceCardContainer>p:nth-child(2) {
+        font-size: 2.5vw;
+        padding-bottom: 3vw;
+    }
+    #serviceCardContainer>p:nth-child(3) {
+        font-size: 2vw;
+    }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+    #serviceCardContainer {
+        width: 80vw;
+        padding: 4vw;
+        height: auto;
+    }
+    #serviceCardImg {
+        height: 30vw;
+        width: 25vw;
+        margin-bottom: 4vw;
+    }
+    #serviceCardContainer>p:nth-child(2) {
+        font-size: 4vw;
+        padding-bottom: 4vw;
+    }
+    #serviceCardContainer>p:nth-child(3) {
+        font-size: 3vw;
+    }
 }

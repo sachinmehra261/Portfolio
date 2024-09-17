@@ -1,36 +1,34 @@
-#projectsMainContainer{
+/* Base styles for larger screens (default) */
+#projectsMainContainer {
     margin-bottom: 4.875vw;
     color: white;
 }
-#projectsMainContainer>p{
+#projectsMainContainer>p {
     text-align: center;
     width: 80%;
     margin: auto;
 }
-#projectsMainContainer>p:nth-child(1){
+#projectsMainContainer>p:nth-child(1) {
     font-size: 2.778vw;
     font-weight: 600;
     padding-bottom: 1.111vw;
 }
-#projectsMainContainer>p:nth-child(1)>span{
+#projectsMainContainer>p:nth-child(1)>span {
     color: #0872BF;
 }
-#projectsMainContainer>p:nth-child(2){
+#projectsMainContainer>p:nth-child(2) {
     font-size: 1.667vw;
     padding-bottom: 6.056vw;
 }
 
-#projectsCardContainer{
+#projectsCardContainer {
     display: flex;
     align-items: center;
-    /* flex-direction: row; */
     gap: 1vw;
-    /* border: 2px solid red; */
-    /* border: 2px solid red; */
     padding: 1.4vw;
 }
 
-#projectCard{
+#projectCard {
     min-width: 40.889vw;
     height: 25.909vw;
     border-radius: 2vw;
@@ -38,49 +36,48 @@
     margin-bottom: 6.056vw;
     transition: .7s all;
 }
-#projectCard>img{
+#projectCard>img {
     height: 100%;
     width: 100%;
     border-radius: 2vw;
     object-fit: contain;
 }
-#projectCard:hover{
+#projectCard:hover {
     transform: scale(1.03);
 }
 
-.projectSeparator{
+.projectSeparator {
     min-width: 15vw;
     height: 5px;
     background-color: #0872BF;
     border-radius: .5vw;
 }
 
-#projectContent{
-    /* border: 2px solid red; */
+#projectContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1vw;
 }
-#projectContent>p:nth-child(1){
+#projectContent>p:nth-child(1) {
     font-size: 2.7vw;
     color: #0872BF;
 }
-#projectContent>p:nth-child(2){
+#projectContent>p:nth-child(2) {
     font-size: 1.5vw;
 }
-#projectContent>p:nth-child(3){
+#projectContent>p:nth-child(3) {
     font-size: 1.2vw;
 }
-#projectContent>p:nth-child(3)>strong{
+#projectContent>p:nth-child(3)>strong {
     color: #0872BF;
 }
-#projectViewBtnContainer{
+#projectViewBtnContainer {
     display: flex;
     justify-content: center;
     gap: 2vw;
 }
-#projectViewBtnContainer>button{
+#projectViewBtnContainer>button {
     background-color: #0872BF;
     padding: .7vw 2vw;
     border-radius: .4vw;
@@ -88,4 +85,96 @@
     font-weight: 600;
     cursor: pointer;
     color: white;
+}
+
+.codeBtn{
+    background-color: #0872BF;
+    padding: .7vw;
+    width: 100%;
+    border-radius: .5vw;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media query for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    #projectsMainContainer {
+        margin-bottom: 5vw;
+    }
+    #projectsMainContainer>p:nth-child(1) {
+        font-size: 5vw;
+        padding-bottom: 2vw;
+    }
+    #projectsMainContainer>p:nth-child(2) {
+        font-size: 3vw;
+        padding-bottom: 4vw;
+    }
+    #projectsCardContainer {
+        flex-direction: column;
+        padding: 2vw;
+    }
+    #projectCard {
+        min-width: 100%;
+        height: 50vw;
+        margin-bottom: 4vw;
+    }
+    #projectContent>p:nth-child(1) {
+        font-size: 5vw;
+    }
+    #projectContent>p:nth-child(2) {
+        font-size: 3vw;
+    }
+    #projectContent>p:nth-child(3) {
+        font-size: 2.5vw;
+    }
+    #projectViewBtnContainer>button {
+        padding: 1vw 4vw;
+        font-size: 3vw;
+    }
+    .codeBtn{
+        font-size: 2vw;
+    }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+    #projectsMainContainer {
+        margin-bottom: 6vw;
+    }
+    #projectsMainContainer>p:nth-child(1) {
+        font-size: 6vw;
+    }
+    #projectsMainContainer>p:nth-child(2) {
+        font-size: 4vw;
+    }
+    #projectsCardContainer {
+        gap: 2vw;
+        padding: 2vw;
+    }
+    #projectCard {
+        height: 60vw;
+        min-width: 100%;
+    }
+    #projectContent>p:nth-child(1) {
+        font-size: 6vw;
+    }
+    #projectContent>p:nth-child(2) {
+        font-size: 4vw;
+    }
+    #projectContent>p:nth-child(3) {
+        font-size: 3.5vw;
+    }
+    #projectViewBtnContainer>button {
+        padding: 1.5vw 5vw;
+        font-size: 4vw;
+    }
+    .codeBtn{
+        font-size: 2vw;
+    }
 }

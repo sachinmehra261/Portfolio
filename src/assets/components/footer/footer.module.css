@@ -1,46 +1,69 @@
-#footer{
+/* Base styles for larger screens (default) */
+#footer {
     display: flex;
     flex-direction: column;
     gap: 15px;
     color: white;
-    /* border: 2px solid red; */
 }
-#footer>#copyrightContainer{
+#footer>#copyrightContainer {
     display: flex;
     gap: 15px;
-    /* border: 2px solid red; */
     justify-content: center;
     padding: 2vw;
-    /* border: 2px solid red; */
     font-size: 18px;
 }
-#footer>#copyrightContainer>div{
+#footer>#copyrightContainer>div {
     display: flex;
     gap: 15px;
     align-items: center;
-    /* justify-content: center; */
 }
-#footer>#copyrightContainer::before{
+#footer>#copyrightContainer::before, 
+#footer>#copyrightContainer::after {
     content: '';
     position: relative;
     top: 10px;
-    height: .13vw;
+    height: 0.13vw;
     width: 20%;
     background-color: rgb(217, 217, 217);
 }
-#footer>#copyrightContainer::after{
-    top: 10px;
-    content: '';
-    position: relative;
-    height: .13vw;
-    width: 20%;
-    background-color: rgb(217, 217, 217);
-}
-#footer>#copyrightContainer>div>img{
-   cursor: pointer;
+#footer>#copyrightContainer>div>img {
+    cursor: pointer;
 }
 
-#mailLogo{
-    color: #2c67ff;
-    font-size :1.6vw
+/* Media query for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    #footer {
+        gap: 10px;
+    }
+    #footer>#copyrightContainer {
+        flex-direction: column;
+        gap: 10px;
+        padding: 1.5vw;
+        font-size: 16px;
+    }
+    #footer>#copyrightContainer::before, 
+    #footer>#copyrightContainer::after {
+        width: 40%;
+    }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+    #footer {
+        gap: 8px;
+    }
+    #footer>#copyrightContainer {
+        flex-direction: column;
+        gap: 8px;
+        padding: 1vw;
+        font-size: 14px;
+    }
+    #footer>#copyrightContainer::before, 
+    #footer>#copyrightContainer::after {
+        width: 50%;
+    }
+    #footer>#copyrightContainer>div>img {
+        width: 6vw;
+        height: auto;
+    }
 }

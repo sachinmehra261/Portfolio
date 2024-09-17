@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./about.module.css";
-import profile from '../../images/DSC_5567.JPG'
+import profile from '../../images/profile.png'
 import fb from '../../images/fb.svg'
 import insta from '../../images/instagram.svg'
 import linkedin from '../../images/linkedin.svg'

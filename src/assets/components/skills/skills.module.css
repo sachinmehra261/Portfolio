@@ -1,32 +1,34 @@
-#skillsMainContainer{
+/* Base styles for larger screens (default) */
+#skillsMainContainer {
     width: 88vw;
     margin: 0vw auto 7.153vw;
     color: white;
     /* border: 1px solid red; */
 }
-#skillsMainContainer>div:nth-child(1){
+#skillsMainContainer>div:nth-child(1) {
     display: flex;
     justify-content: center;
     padding-bottom: 5vw;
 }
-#skillsMainContainer>div>p:nth-child(1){
+#skillsMainContainer>div>p:nth-child(1) {
+    margin-top: 2vw;
     text-align: center;
     font-size: 2.431vw;
     padding: .5vw 1.5vw;
     display: inline-block;
     border-radius: 1.2vw;
-    border:2px solid #0872BF;
+    border: 2px solid #0872BF;
     color: #0872BF;
 }
 
-#skillsSubContainer{
+#skillsSubContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0vw 15.722vw;
     margin-bottom: 3.5vw;
 }
-#skillCard{
+#skillCard {
     text-align: center;
     height: 9.944vw;
     width: 6.944vw;
@@ -35,11 +37,79 @@
     justify-content: space-between;
     /* border: 1px solid red; */
 }
-#skillCard>img{
+#skillCard>img {
     height: 7.944vw;
     width: 6.944vw;
 }
-#skillCard>p{
+#skillCard>p {
     font-weight: 600;
     font-size: 1.2vw;
+}
+
+/* Media query for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    #skillsMainContainer {
+        width: 95vw;
+        margin-bottom: 5vw;
+    }
+    #skillsMainContainer>div:nth-child(1) {
+        padding-bottom: 4vw;
+    }
+    #skillsMainContainer>div>p:nth-child(1) {
+        font-size: 4vw;
+        padding: 1vw 2.5vw;
+        border-radius: 2vw;
+        margin-bottom: 6vw;
+    }
+    #skillsSubContainer {
+        padding: 0vw 5vw;
+        justify-content: center;
+        gap: 7vw;
+    }
+    #skillCard {
+        height: 15vw;
+        width: 12vw;
+    }
+    #skillCard>img {
+        height: 10vw;
+        width: 10vw;
+    }
+    #skillCard>p {
+        font-weight: 600;
+        font-size: 2vw;
+        padding-bottom: 4vw;
+    }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+    #skillsMainContainer {
+        width: 100vw;
+        margin-bottom: 10vw;
+    }
+    #skillsMainContainer>div:nth-child(1) {
+        padding-bottom: 3vw;
+    }
+    #skillsMainContainer>div>p:nth-child(1) {
+        font-size: 5vw;
+        padding: 1.5vw 3vw;
+        border-radius: 2.5vw;
+        margin-bottom: 6vw;
+    }
+    #skillsSubContainer {
+        padding: 0vw 2vw;
+        justify-content: center;
+        gap: 5vw;
+    }
+    #skillCard {
+        height: 20vw;
+        width: 16vw;
+    }
+    #skillCard>img {
+        height: 13vw;
+        width: 13vw;
+    }
+    #skillCard>p {
+        font-size: 3vw;
+    }
 }
