@@ -1,122 +1,99 @@
-/* Base styles for larger screens (default) */
-#contactMainContainer {
-    width: 88%;
-    margin: 0vw auto 5vw;
+.contactSection {
+    padding: 5rem 6.319vw;
+    color: #ffffff;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-}
-#contactHeading {
-    text-align: center;
-    font-size: 2.6vw;
-    font-weight: 600;
-    padding-bottom: 3vw;
-}
-#contactHeading>span {
-    color: #0872BF;
 }
 
-#contactForm {
+.contactContainer {
+    width: 100%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1.5vw;
-    font-size: 1.3vw;
-}
-#contactForm>input {
-    padding: 1vw;
-    width: 30vw;
-    border-bottom: .15vw solid #0872BF;
-    border-left: .15vw solid #0872BF;
-    outline: none;
-    border-right: none;
-    border-top: none;
-    background-color: rgba(0, 0, 0, 0);
-    font-weight: 500;
-    font-size: 1vw;
-    color: white;
+    gap: 1rem;
 }
 
-#contactForm>textarea {
-    border-bottom: .15vw solid #0872BF;
-    border-left: .15vw solid #0872BF;
-    background-color: rgba(0, 0, 0, 0);
-    padding: 1vw;
-    max-width: 30vw;
-    min-width: 30vw;
-    outline: none;
-    border-right: none;
-    border-top: none;
-    font-weight: 500;
-    font-size: 1vw;
-    color: white;
+.contactContainer h2 {
+    font-size: 2.5rem;
+    color: #0872BF;
+    font-weight: bold;
+    margin: 0;
 }
-#contactForm>button {
-    padding: .8vw 1vw;
-    width: 30vw;
+
+.contactContainer p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 1.5rem;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formGroup label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.formGroup input,
+.formGroup textarea {
+    padding: 1rem;
+    background-color: #1a2323; /* Dark layout input panel fields */
+    border: 1px solid #333333;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
     outline: none;
-    border: none;
-    border-radius: .5vw;
-    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    border-color: #0872BF; /* Changes border to your signature blue on click */
+}
+
+.submitButton {
+    padding: 1rem;
     background-color: #0872BF;
-    font-size: 1vw;
-    color: white;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-/* Media query for tablets and smaller screens */
-@media screen and (max-width: 768px) {
-    #contactMainContainer {
-        width: 95%;
-        margin-bottom: 4vw;
-    }
-    #contactHeading {
-        font-size: 4vw;
-        padding-bottom: 2.5vw;
-    }
-    #contactForm {
-        gap: 2vw;
-    }
-    #contactForm>input, 
-    #contactForm>textarea, 
-    #contactForm>button {
-        width: 80%;
-        font-size: 1.5vw;
-    }
-    #contactForm>input, 
-    #contactForm>textarea {
-        padding: 1.5vw;
-        width: 30vw;
-    }
+.submitButton:hover:not(:disabled) {
+    background-color: #065fa2;
 }
 
-/* Media query for mobile devices */
+.submitButton:disabled {
+    background-color: #555555;
+    cursor: not-allowed;
+}
+
+.statusText {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #0872BF;
+    font-weight: bold;
+}
+
+/* Media Queries for Mobile Screens */
 @media screen and (max-width: 480px) {
-    #contactMainContainer {
-        width: 100%;
-        margin-bottom: 6vw;
-    }
-    #contactHeading {
-        font-size: 5vw;
-        padding-bottom: 2vw;
-    }
-    #contactForm {
-        gap: 3vw;
-    }
-    #contactForm>input, 
-    #contactForm>textarea, 
-    #contactForm>button {
-        width: 90%;
-        font-size: 2.5vw;
-    }
-    #contactForm>input, 
-    #contactForm>textarea {
-        padding: 2vw;
-        width: 30vw;
-    }
-    #contactForm>button {
-        padding: 2vw;
-        font-size: 2.5vw;
-    }
+    .contactContainer h2 { font-size: 2rem; }
+    .contactContainer p { font-size: 1rem; }
+    .formGroup input, .formGroup textarea { padding: 0.8rem; }
+    .submitButton { font-size: 1rem; }
 }

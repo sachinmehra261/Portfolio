@@ -21,19 +21,27 @@ function About() {
             I am committed to finding innovative solutions and continuously
             experimenting to help my clients achieve their goals.
           </p>
-          <a href="whatsapp://send?phone=9682348051&text=Hello%20Sachin Mehra%20"><button id={styles.whatsAppConnect}><p>Let’s Talk </p><FaWhatsapp id={styles.whatsAppLogo}/></button></a>
+          {/* FIXED: The href link quote is now perfectly closed */}
+          <a href="whatsapp://send?phone=9682348051&text=Hello%20Sachin%20Mehra">
+            <button id={styles.whatsAppConnect}>
+              <p>Let’s Talk </p>
+              <FaWhatsapp id={styles.whatsAppLogo}/>
+            </button>
+          </a>
+          
           <div id={styles.socialMedia}>
-            <p>Check out My</p>
+            <span className={styles.socialMediaLabel}>Check out My</span>
             <a href="https://www.facebook.com/profile.php?id=100015125777257" target="_blank" rel="noopener noreferrer"><img src={fb} alt="" /></a>
             <a href="https://www.instagram.com/mehrasachin907/" target="_blank" rel="noopener noreferrer"><img src={insta} alt="" /></a>
             <a href="https://www.linkedin.com/in/sachin-mehra-8a7541275" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt="" /></a>
             <a href="mailto:mehrasachin261@gmail.com" target="_blank" rel="noopener noreferrer"><IoMdMail id={styles.mailLogo}/></a>
-          
           </div>
         </div>
+
         <div id={styles.profilePicture}>
-            {/* <img src={profile} alt="" /> */}
-            <div></div>
+          <div>
+            <img src={profile} alt="Sachin Mehra" className={styles.innerProfileImage} />
+          </div>
         </div>
       </div>
     </>

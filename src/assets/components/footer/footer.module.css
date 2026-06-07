@@ -1,69 +1,33 @@
-/* Base styles for larger screens (default) */
-#footer {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    color: white;
-}
-#footer>#copyrightContainer {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    padding: 2vw;
-    font-size: 18px;
-}
-#footer>#copyrightContainer>div {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-#footer>#copyrightContainer::before, 
-#footer>#copyrightContainer::after {
-    content: '';
-    position: relative;
-    top: 10px;
-    height: 0.13vw;
-    width: 20%;
-    background-color: rgb(217, 217, 217);
-}
-#footer>#copyrightContainer>div>img {
-    cursor: pointer;
+.footer {
+  color: white;
+  padding: 2rem 0;
+  width: 100%;
 }
 
-/* Media query for tablets and smaller screens */
-@media screen and (max-width: 768px) {
-    #footer {
-        gap: 10px;
-    }
-    #footer>#copyrightContainer {
-        flex-direction: column;
-        gap: 10px;
-        padding: 1.5vw;
-        font-size: 16px;
-    }
-    #footer>#copyrightContainer::before, 
-    #footer>#copyrightContainer::after {
-        width: 40%;
-    }
+.copyrightContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1rem;
+  width: 100%;
 }
 
-/* Media query for mobile devices */
+.copyrightContainer::before, 
+.copyrightContainer::after {
+  content: '';
+  height: 1px;
+  flex: 0 1 150px;
+  background-color: rgb(217, 217, 217);
+}
+
 @media screen and (max-width: 480px) {
-    #footer {
-        gap: 8px;
-    }
-    #footer>#copyrightContainer {
-        flex-direction: column;
-        gap: 8px;
-        padding: 1vw;
-        font-size: 14px;
-    }
-    #footer>#copyrightContainer::before, 
-    #footer>#copyrightContainer::after {
-        width: 50%;
-    }
-    #footer>#copyrightContainer>div>img {
-        width: 6vw;
-        height: auto;
-    }
+  .copyrightContainer {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+  .copyrightContainer::before, 
+  .copyrightContainer::after {
+    flex: 0 1 50px;
+  }
 }

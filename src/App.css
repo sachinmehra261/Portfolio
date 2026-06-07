@@ -1,16 +1,35 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scrollbar-width: none;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
-  
-}
-body{
-  background-color: #141A1A;
 }
 
-.poppins-regular {
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #141A1A;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar styling (optional but ensures a cleaner aesthetic instead of entirely vanishing) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #141A1A;
+}
+::-webkit-scrollbar-thumb {
+  background: #0872BF;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #065a99;
 }

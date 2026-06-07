@@ -8,52 +8,40 @@ import mysql from "../../images/sql.svg";
 import java from "../../images/java.svg";
 import springboot from "../../images/springboot.svg";
 import hibernate from "../../images/hibernate.svg";
+import flutter from "../../images/flutter.svg"; // 1. Imported your new Flutter SVG
+import github from "../../images/github.svg"; // 1. Imported your new Flutter SVG
 
 function Skills() {
+  // 2. Added Flutter into your techSkills array mapping data
+  const techSkills = [
+    { name: "HTML", img: html },
+    { name: "CSS", img: css },
+    { name: "JavaScript", img: JavaScript },
+    { name: "React", img: react },
+    { name: "Java", img: java },
+    { name: "SpringBoot", img: springboot },
+    { name: "Hibernate", img: hibernate },
+    { name: "Flutter", img: flutter },
+    { name: "MySQL", img: mysql },
+    { name: "Github", img: github }
+  ];
+
   return (
-    <>
-      <div id={styles.skillsMainContainer}>
-        <div>
-          <p>Skills</p>
-        </div>
-        <div id={styles.skillsSubContainer}>
-          <div id={styles.skillCard}>
-            <img src={html} alt="" />
-            <p>HTML</p>
-          </div>
-          <div id={styles.skillCard}>
-            <img src={css} alt="" />
-            <p>CSS</p>
-          </div>
-          <div id={styles.skillCard}>
-            <img src={JavaScript} alt="" />
-            <p>JavaScript</p>
-          </div>
-          <div id={styles.skillCard}>
-            <img src={react} alt="" />
-            <p>React</p>
-          </div>
-        </div>
-        <div id={styles.skillsSubContainer}>
-          <div id={styles.skillCard}>
-            <img src={java} alt="" />
-            <p>Java</p>
-          </div>
-          <div id={styles.skillCard}>
-            <img src={springboot} alt="" />
-            <p>SpringBoot</p>
-          </div>
-          <div id={styles.skillCard}>
-            <img src={hibernate} alt="" />
-            <p>Hibernate</p>
-          </div>
-          <div id={styles.skillCard}>
-            <img src={mysql} alt="" />
-            <p>MySQL</p>
-          </div>
-        </div>
+    <section id="skills" className={styles.skillsMainContainer}>
+      <div className={styles.headingWrapper}>
+        <h2 className={styles.sectionHeading}>Skills</h2>
       </div>
-    </>
+      <div className={styles.skillsGrid}>
+        {techSkills.map((skill, index) => (
+          <div className={styles.skillCard} key={index}>
+            <div className={styles.imgWrapper}>
+              <img src={skill.img} alt={skill.name} />
+            </div>
+            <p>{skill.name}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 

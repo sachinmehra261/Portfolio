@@ -1,132 +1,141 @@
-/* Base styles for larger screens (default) */
-#navbar {
+.navbar {
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 2.255vw 6.944vw;
+  padding: 1.5rem 6vw;
   align-items: center;
-  margin-bottom: 4.828vw;
+  background-color: #141A1A;
+  width: 100%;
+  box-sizing: border-box;
 }
-#logoContainer {
+
+.navFixed {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logoContainer {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
+  z-index: 1002; /* Ensures your logo stays visible above the overlay */
 }
-#logoContainer > a > p {
-  font-size: 1.944vw;
-  font-weight: 600;
-}
-#logo {
-  height: 2.431vw;
-}
-#navbarItemsContainer > ul {
-  display: flex;
-  gap: 4.617vw;
-}
-#navbarLiItems {
-  list-style: none;
-  padding: 0.2vw 1vw;
-  border-radius: 10px;
-  border: 1px solid #414141;
-  font-size: 1.3vw;
-  cursor: pointer;
-}
-a {
+
+.logoContainer a {
   text-decoration: none;
   color: white;
 }
-#navbarLiItems:hover {
+
+.logoContainer p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.logo {
+  height: 2.5rem;
+  display: block;
+}
+
+/* Desktop View Settings */
+.menuDrawer ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.menuDrawer ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.05rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #414141;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.menuDrawer ul a:hover {
   color: #0872bf;
   border: 1px solid #0872bf;
 }
 
-/* Media query for tablets and smaller screens */
-@media screen and (max-width: 768px) {
-  #navbar {
-    padding: 2vw 4vw;
+.iconWrapper {
+  display: none;
+  cursor: pointer;
+  z-index: 1002; /* Keeps the toggle switch safely layered on top */
+}
+
+.menuIcon {
+  font-size: 2rem;
+  color: white;
+  display: block;
+}
+
+/* Responsive Overhaul for Mobile and Tablet Viewports */
+@media screen and (max-width: 992px) {
+  .iconWrapper {
+    display: block;
   }
-  #logoContainer > a > p {
-    font-size: 2.5vw;
+
+  .menuDrawer {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Keeps it hidden off-screen to the left when inactive */
+    width: 100vw; /* Forces the drawer to take up exactly the full viewport width */
+    height: 100vh;
+    height: 100dvh; /* Dynamic window tracking for mobile browsers */
+    background-color: #141A1A;
+    transition: left 0.3s ease-in-out;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
   }
-  #logo {
-    height: 3vw;
+
+  /* Sweeps the menu into view cleanly across the full screen width */
+  .menuDrawer.menuActive {
+    left: 0;
   }
-  #navbarItemsContainer > ul {
-    gap: 3vw;
+
+  .menuDrawer ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    gap: 2rem;
+    box-sizing: border-box;
   }
-  #navbarLiItems {
-    font-size: 1.8vw;
-    padding: 0.5vw 1.5vw;
+
+  .menuDrawer ul li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menuDrawer ul a {
+    width: 85%;
+    max-width: 300px;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 0.8rem 0;
   }
 }
 
-/* Media query for mobile devices */
 @media screen and (max-width: 480px) {
-  #navbar {
-    padding: 16px 20px 3px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    background-color: #141A1A;
-    width: 100%;
-    position: fixed;
-    top: 0px;
+  .logoContainer p {
+    font-size: 1.4rem;
   }
-  #logoContainer > a > p {
-    font-size: 3.5vw;
+  
+  .logo {
+    height: 2rem;
   }
-  #logo {
-    height: 4vw;
-  }
-  #navbarItemsContainer > ul {
-    flex-direction: row;
-    width: 82vw;
-    flex-wrap: wrap;
-    gap: 2vw;
-    align-items: flex-start;
-    display: none;
-  }
-  #navbarItemsContainer > ul a {
-    width: 100%;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.284);
-    text-align: center;
-    padding: 7px;
-  }
-  #navbarItemsContainer > ul a li{
-    border: none;
-    font-size: 18px;
-  }
-  .flex {
-    display: flex !important;
-  }
-  .nav-fixed {
-    position: sticky;
-    top: 0;
-  }
-  .menu {
-    flex-direction: column !important;
-    height: 100vh;
-    width: 100vw !important;
-    position: fixed;
-    left: 0;
-    background-color: #0872bf;
-    gap: 0 !important;
-    align-items: center !important;
-  }
-  .borderNone {
-    border: none;
-  }
-  #navbarLiItems {
-    font-size: 2.5vw;
-    padding: 0.8vw 2vw;
-  }
-  #menuIcon {
-    display: block !important;
-    position: absolute;
-    top: 14px;
-    right: 30px;
-    font-size: 17px;
-    font-weight: 800;
-    cursor: pointer;
+  
+  .menuIcon {
+    font-size: 1.8rem;
   }
 }
