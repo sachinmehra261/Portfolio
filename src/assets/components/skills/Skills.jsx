@@ -6,10 +6,10 @@ import JavaScript from "../../images/js.svg";
 import react from "../../images/react.svg";
 import mysql from "../../images/sql.svg";
 import java from "../../images/java.svg";
-import springboot from "../../images/springboot.svg";
-import hibernate from "../../images/hibernate.svg";
-import flutter from "../../images/flutter.svg"; // 1. Imported your new Flutter SVG
-import github from "../../images/github.svg"; // 1. Imported your new Flutter SVG
+import springboot from "../../images/springboot.png";
+import dart from "../../images/dart.svg";
+import flutter from "../../images/flutter.png"; // 1. Imported your new Flutter SVG
+import github from "../../images/github.png"; // 1. Imported your new Flutter SVG
 
 function Skills() {
   // 2. Added Flutter into your techSkills array mapping data
@@ -20,7 +20,7 @@ function Skills() {
     { name: "React", img: react },
     { name: "Java", img: java },
     { name: "SpringBoot", img: springboot },
-    { name: "Hibernate", img: hibernate },
+    { name: "Dart", img: dart },
     { name: "Flutter", img: flutter },
     { name: "MySQL", img: mysql },
     { name: "Github", img: github }
