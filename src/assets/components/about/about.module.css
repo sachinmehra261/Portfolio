@@ -1,251 +1,238 @@
-#aboutMainContainer{
-    padding: 0vw 6.319vw;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8.75vw;
+#aboutMainContainer {
+  padding: 0vw 6.319vw;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 8.75vw; */
 }
-#aboutContentContainer{
-    display: flex;
-    flex-direction: column;
-    width: 33.922vw;
-    margin-top: 5.325vw;
+#aboutContentContainer {
+  display: flex;
+  flex-direction: column;
+  width: 33.922vw;
+  margin-top: 5.325vw;
 }
-#aboutContentContainer>p:nth-child(1){
-    font-size: 1.667vw;
-    padding-bottom: 2.014vw;
+#aboutContentContainer > p:nth-child(1) {
+  font-size: 1.667vw;
+  padding-bottom: 2.014vw;
 }
-#aboutContentContainer>p:nth-child(1)>span{
-    color: #0872BF;
+#aboutContentContainer > p:nth-child(1) > span {
+  color: #0872bf;
 }
-#aboutContentContainer>p:nth-child(2){
-    font-size: 2.431vw;
-    font-weight: bold;
-    color: #0872BF;
-    padding-bottom: 2.55vw;
+#aboutContentContainer > p:nth-child(2) {
+  font-size: 2.431vw;
+  font-weight: bold;
+  color: #0872bf;
+  padding-bottom: 2.55vw;
 }
-#aboutContentContainer>p:nth-child(3){
-    font-size: 1.875vw;
-    padding-bottom: 1.93vw;
+#aboutContentContainer > p:nth-child(3) {
+  font-size: 1.875vw;
+  padding-bottom: 1.93vw;
 }
-#aboutContentContainer>p:nth-child(4){
-    font-size: 1.597vw;
-    padding-bottom: 1.93vw;
+#aboutContentContainer > p:nth-child(4) {
+  font-size: 1.597vw;
+  padding-bottom: 1.93vw;
 }
-
-#aboutContentContainer > a {
-    text-decoration: none;
-}
-
-#whatsAppConnect{
-    padding: 1.042vw 0vw;
-    background-color: #0872BF;
-    border-radius: 10px;
-    width: 12.153vw;
-    font-size: 1.389vw;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 4.653vw;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    gap: .3vw;
-    justify-content: center;
-    align-items: center;
+#whatsAppConnect {
+  padding: 1.042vw 0vw;
+  background-color: #0872bf;
+  border-radius: 10px;
+  width: 12.153vw;
+  font-size: 1.389vw;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 4.653vw;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  gap: 0.3vw;
+  justify-content: center;
+  align-items: center;
 }
 
-#whatsAppLogo{
-    font-size: 1.4vw;
+#whatsAppLogo {
+  font-size: 1.4vw;
 }
 
-#socialMedia{
-    display: flex;
-    align-items: center;
-    gap: 1vw;
-    flex-wrap: nowrap; 
+#aboutContentContainer > div > p {
+  font-size: 1.667vw;
 }
 
-.socialMediaLabel {
-    font-size: 1.667vw;
-    white-space: nowrap; 
+#profilePicture {
+  height: 44.167vw;
+  width: 34.722vw;
+  margin-right: 100px;
+  position: relative;
+  z-index: 1;
 }
 
-#socialMedia a {
-    text-decoration: none;
-    display: inline-flex; 
-    align-items: center;
+/* Base style for the blue area background shape */
+#profilePicture > div {
+  height: 33.333vw;
+  border-radius: 50% 79% 57% 65%;
+  width: 33vw;
+  background-color: #0872bf;
+  position: absolute;
+  top: 0;
+  transform: rotate(-6deg);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#socialMedia a>img{
-    height: 1.6vw;
-    display: block;
-}
-#mailLogo{
-    color: #0872BF; 
-    font-size: 2vw;
-    display: block;
-}
-
-#profilePicture{
-    height: 44.167vw;
-    width: 34.722vw;
-    margin-right: 100px;
-    position: relative;
-    z-index: 1;
-}
-
-#profilePicture>div{
-    height: 33.333vw;
-    border-radius: 50% 79% 57% 65%;
-    width: 33vw;
-    background-color: #0872BF;
-    position: absolute;
-    top: 0;
-    transform: rotate(-6deg);
-    overflow: hidden; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Keeps your image crisp, centered, and aligned inside the blue area */
 .innerProfileImage {
-    height: 110%;
-    width: 75%;
-    object-fit: contain;
-    object-position: bottom;
-    transform: scale(1.1); 
+  height: 110%;
+  width: 75%;
+  object-fit: contain;
+  object-position: bottom;
+  transform: scale(1.1);
+}
+
+/* Container for alignment */
+.buttonContainer {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 4.653vw;
+}
+
+/* Mail Button: Transparent by default */
+.mailConnect {
+  padding: 1.042vw 0vw;
+  background-color: transparent;
+  border: 2px solid #0872bf; /* Blue border remains visible */
+  border-radius: 10px;
+  width: 12.153vw;
+  font-size: 1.389vw;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5vw;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease; /* Smooth animation */
+}
+
+/* Turns blue only on hover */
+.mailConnect:hover {
+  background-color: #0872bf;
+}
+
+/* Remove underlines from all anchor tags */
+#aboutContentContainer a {
+  text-decoration: none !important;
 }
 
 /* Media query for tablets and smaller screens */
 @media screen and (max-width: 768px) {
-    #aboutMainContainer {
-        display: flex;
-        flex-direction: column-reverse;
-        padding: 0vw 4vw;
-        margin-bottom: 5vw;
-    }
-    #aboutContentContainer {
-        width: 100%;
-        margin-top: 4vw;
-    }
-    
-    #aboutContentContainer > p:nth-child(1) {
-        font-size: 3.5vw;
-        padding-bottom: 1.5vw;
-    }
-    #aboutContentContainer > p:nth-child(2) {
-        font-size: 5vw;
-        padding-bottom: 2vw;
-    }
-    #aboutContentContainer > p:nth-child(3) {
-        font-size: 4vw;
-        padding-bottom: 1.5vw;
-    }
-    #aboutContentContainer > p:nth-child(4) {
-        font-size: 3.2vw;
-        padding-bottom: 3vw;
-        line-height: 1.4;
-    }
-    
-    #whatsAppConnect {
-        width: 180px;
-        font-size: 16px;
-        padding: 12px 0px;
-        margin-bottom: 4vw;
-    }
-    #whatsAppLogo {
-        font-size: 18px;
-    }
-    
-    #socialMedia {
-        padding: 2vw 0;
-        gap: 3.5vw;
-    }
-    .socialMediaLabel {
-        font-size: 3.5vw;
-    }
-    #socialMedia a > img {
-        height: 5.5vw;
-    }
-    #mailLogo{
-        color: #0872BF; 
-        font-size: 6.5vw;
-    }
-    
-    #profilePicture {
-        height: 65vw;
-        width: 65vw;
-        margin: 4vw auto;
-    }
-    #profilePicture > div {
-        margin-top: 0;
-        height: 100%;
-        width: 100%;
-    }
+  #aboutMainContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0vw 4vw;
+    margin-bottom: 5vw;
+  }
+  #aboutContentContainer {
+    width: 100%;
+    margin-top: 4vw;
+  }
+
+  /* Responsive typography rules for text styling */
+  #aboutContentContainer > p:nth-child(1) {
+    font-size: 3.5vw;
+    padding-bottom: 1.5vw;
+  }
+  #aboutContentContainer > p:nth-child(2) {
+    font-size: 5vw;
+    padding-bottom: 2vw;
+  }
+  #aboutContentContainer > p:nth-child(3) {
+    font-size: 4vw;
+    padding-bottom: 1.5vw;
+  }
+  #aboutContentContainer > p:nth-child(4) {
+    font-size: 3.2vw;
+    padding-bottom: 3vw;
+    line-height: 1.4;
+  }
+
+  #whatsAppConnect {
+    width: 180px;
+    font-size: 16px;
+    padding: 12px 0px;
+    margin-bottom: 4vw;
+  }
+
+  .mailConnect {
+    width: 180px;
+    font-size: 16px;
+    padding: 12px 0px;
+  }
+
+  /* NO CHANGES TO IMAGE STYLING */
+  #profilePicture {
+    height: 65vw;
+    width: 65vw;
+    margin: 4vw auto;
+  }
+  #profilePicture > div {
+    margin-top: 0;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 /* Media query for mobile devices */
 @media screen and (max-width: 480px) {
-    #aboutMainContainer {
-        display: flex;
-        flex-direction: column-reverse;
-        padding: 0 5vw;
-        margin: 11vw 0vw 0vw;
-    }
-    #aboutContentContainer {
-        margin-top: 6vw;
-    }
-    
-    #aboutContentContainer > p:nth-child(1) {
-        font-size: 5vw;
-        padding-bottom: 1vw;
-    }
-    #aboutContentContainer > p:nth-child(2) {
-        font-size: 7.5vw;
-        padding-bottom: 2vw;
-    }
-    #aboutContentContainer > p:nth-child(3) {
-        font-size: 5.5vw;
-        padding-bottom: 2vw;
-    }
-    #aboutContentContainer > p:nth-child(4) {
-        font-size: 4vw;
-        padding-bottom: 5vw;
-        line-height: 1.5;
-    }
-    
-    #whatsAppConnect {
-        width: 160px;
-        font-size: 15px;
-        padding: 12px 0px;
-        margin-bottom: 6vw;
-    }
-    #whatsAppLogo {
-        font-size: 18px;
-    }
-    
-    #socialMedia {
-        padding: 3vw 0;
-        gap: 4.5vw;
-    }
-    .socialMediaLabel {
-        font-size: 4.5vw;
-    }
-    #socialMedia a > img {
-        height: 7vw;
-    }
-    #mailLogo{
-        color: #0872BF; 
-        font-size: 8vw;
-    }
-    
-    #profilePicture {
-        height: 75vw;
-        width: 75vw;
-        margin: 6vw auto;
-    }
-    #profilePicture > div {
-        height: 100%;
-        width: 100%;
-    }
+  #aboutMainContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 5vw;
+    margin: 11vw 0vw 0vw;
+  }
+  #aboutContentContainer {
+    margin-top: 6vw;
+  }
+
+  /* Responsive typography rules for mobile layout viewports */
+  #aboutContentContainer > p:nth-child(1) {
+    font-size: 5vw;
+    padding-bottom: 1vw;
+  }
+  #aboutContentContainer > p:nth-child(2) {
+    font-size: 7.5vw;
+    padding-bottom: 2vw;
+  }
+  #aboutContentContainer > p:nth-child(3) {
+    font-size: 5.5vw;
+    padding-bottom: 2vw;
+  }
+  #aboutContentContainer > p:nth-child(4) {
+    font-size: 4vw;
+    padding-bottom: 5vw;
+    line-height: 1.5;
+  }
+
+  #whatsAppConnect {
+    width: 160px;
+    font-size: 15px;
+    padding: 12px 0px;
+    margin-bottom: 6vw;
+  }
+
+  .mailConnect {
+    width: 160px;
+    font-size: 15px;
+    padding: 12px 0px;
+  }
+  /* NO CHANGES TO IMAGE STYLING */
+  #profilePicture {
+    height: 75vw;
+    width: 75vw;
+    margin: 6vw auto;
+  }
+  #profilePicture > div {
+    height: 100%;
+    width: 100%;
+  }
 }
